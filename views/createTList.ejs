@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action='/api/createtasklist' method="POST">
+        <label for="listname">name</label>
+        <input type="text" id="listname" name="listname">
+        <label for="listdescription">description</label>
+        <input type="text" id="listdescription" name="listdescription">
+        <label for="listactive">active:</label>
+        <input name="active" type="radio" value="true" />true
+        <input name="active" type="radio" value="false" />false
+
+        <button>create</button>
+    </form>
+</body>
+</html>
