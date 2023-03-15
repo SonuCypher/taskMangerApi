@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this are tasks for <%= id %> </h1>
+    <h2>create new tasks</h2>
+    <form action="/api/createtask" method="POST">
+        <label for="taskname">Task name</label>
+        <input type="text" id="taskname" name="taskname" />
+        <label for="taskdescription">description</label>
+        <input type="text" id="taskdescription" name="taskdescription" />
+        <label for="duedate">due date</label>
+        <input type="date" id="duedate" name="duedate" />
+        <label for="period">period</label>
+        <input type="month" id="period" name="period" />
+        <label for="periodType">period type</label>
+        <!-- <input type="text" id="periodType" name="periodType" /><br> -->
+        <select name="periodType" id="periodType">
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+
+
+
+        <label for="tasklistId">task list id</label>
+        <input type="text" value="<%= id %>" id="tasklistId" name="tasklistId" readonly="true" />
+        <button>create</button>
+    </form>
+</body>
+</html>
